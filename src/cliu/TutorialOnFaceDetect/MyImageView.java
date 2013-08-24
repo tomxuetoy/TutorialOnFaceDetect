@@ -18,8 +18,8 @@ import android.widget.ImageView;
 class MyImageView extends ImageView {
 	private Bitmap mBitmap;
 	private Canvas mCanvas;
-	private int mBitmapWidth = 200;
-	private int mBitmapHeight = 200;
+	private int mBitmapWidth = 400;
+	private int mBitmapHeight = 400;
 	private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 	private int mDisplayStyle = 0;
 	private int[] mPX = null;

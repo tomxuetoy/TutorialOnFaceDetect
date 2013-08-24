@@ -20,8 +20,8 @@ import android.widget.LinearLayout.LayoutParams;
 public class TutorialOnFaceDetect1 extends Activity {
 	private MyImageView mIV;
 	private Bitmap mFaceBitmap;
-	private int mFaceWidth = 200;
-	private int mFaceHeight = 200;
+	private int mFaceWidth = 400;
+	private int mFaceHeight = 400;
 	private static final int MAX_FACES = 10;
 	private static String TAG = "TutorialOnFaceDetect";
 

@@ -22,13 +22,13 @@ import android.widget.LinearLayout.LayoutParams;
 public class TutorialOnFaceDetect extends Activity {
 	private MyImageView mIV;
 	private Bitmap mFaceBitmap;
-	private int mFaceWidth = 200;
-	private int mFaceHeight = 200;
+	private int mFaceWidth = 400;
+	private int mFaceHeight = 400;
 	private static final int MAX_FACES = 10;
 	private static String TAG = "TutorialOnFaceDetect";
 	private static boolean DEBUG = false;
 
-	protected static final int GUIUPDATE_SETFACE = 999;
+//	protected static final int GUIUPDATE_SETFACE = 999;
 	protected Handler mHandler = new Handler() {
 		// @Override
 		public void handleMessage(Message msg) {
@@ -54,7 +54,6 @@ public class TutorialOnFaceDetect extends Activity {
 		mFaceWidth = mFaceBitmap.getWidth();
 		mFaceHeight = mFaceBitmap.getHeight();
 		mIV.setImageBitmap(mFaceBitmap);
-		mIV.invalidate();
 
 		// perform face detection in setFace() in a background thread
 		doLengthyCalc();
@@ -131,8 +130,8 @@ public class TutorialOnFaceDetect extends Activity {
 			public void run() {
 				try {
 					setFace();
-					m.what = TutorialOnFaceDetect.GUIUPDATE_SETFACE;
-					TutorialOnFaceDetect.this.mHandler.sendMessage(m);
+//					m.what = TutorialOnFaceDetect.GUIUPDATE_SETFACE;
+//					TutorialOnFaceDetect.this.mHandler.sendMessage(m);
 				} catch (Exception e) {
 					Log.e(TAG, "doLengthyCalc(): " + e.toString());
 				}
